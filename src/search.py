@@ -44,9 +44,7 @@ class VectorSearch:
 
         # Создание пар (индекс, сходство)
         results = [
-            (idx, score)
-            for idx, score in enumerate(similarities)
-            if score >= threshold
+            (idx, score) for idx, score in enumerate(similarities) if score >= threshold
         ]
 
         # Сортировка по убыванию сходства
@@ -56,9 +54,7 @@ class VectorSearch:
         results = results[:top_k]
 
         # Формирование финального списка с метаданными
-        final_results = [
-            (database_metadata[idx], score) for idx, score in results
-        ]
+        final_results = [(database_metadata[idx], score) for idx, score in results]
 
         return final_results
 
@@ -89,7 +85,7 @@ class VectorSearch:
             output.append("-" * 70)
 
             # Обрезаем длинный текст для preview
-            text = metadata['text']
+            text = metadata["text"]
             if len(text) > 300:
                 text = text[:300] + "..."
 
@@ -105,11 +101,13 @@ if __name__ == "__main__":
 
     # Создание тестовых данных
     # База данных: 3 вектора
-    db_vectors = np.array([
-        np.random.rand(384),  # Случайный вектор 1
-        np.random.rand(384),  # Случайный вектор 2
-        np.random.rand(384),  # Случайный вектор 3
-    ])
+    db_vectors = np.array(
+        [
+            np.random.rand(384),  # Случайный вектор 1
+            np.random.rand(384),  # Случайный вектор 2
+            np.random.rand(384),  # Случайный вектор 3
+        ]
+    )
 
     db_metadata = [
         {

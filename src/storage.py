@@ -169,7 +169,9 @@ if __name__ == "__main__":
     # Статистика
     print(f"\n📊 Статистика хранилища:")
     print(f"   Всего записей: {storage.count()}")
-    print(f"   Векторов: {storage.get_all_vectors().shape if storage.get_all_vectors() is not None else 'None'}")
+    print(
+        f"   Векторов: {storage.get_all_vectors().shape if storage.get_all_vectors() is not None else 'None'}"
+    )
 
     # Очистка тестового хранилища
     storage.clear()

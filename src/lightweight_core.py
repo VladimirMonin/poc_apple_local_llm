@@ -53,7 +53,9 @@ class LightweightCore:
         """Ленивая загрузка модели эмбеддингов."""
         if self._embedding_model is None:
             print("\n📦 Загрузка модели эмбеддингов...")
-            self._embedding_model, self._tokenizer = load("mlx-community/all-MiniLM-L6-v2-4bit")
+            self._embedding_model, self._tokenizer = load(
+                "mlx-community/all-MiniLM-L6-v2-4bit"
+            )
             print("✅ Модель загружена")
         return self._embedding_model, self._tokenizer
 
@@ -110,7 +112,7 @@ class LightweightCore:
             Numpy array с эмбеддингом
         """
         model, tokenizer = self._get_embedding_model()
-        
+
         # Токенизация
         inputs = tokenizer.batch_encode_plus(
             [text],
@@ -119,11 +121,11 @@ class LightweightCore:
             truncation=True,
             max_length=512,  # Ограничиваем для экономии памяти
         )
-        
+
         # Генерация эмбеддинга
         outputs = model(inputs["input_ids"], attention_mask=inputs["attention_mask"])
         embeddings = outputs.text_embeds
-        
+
         return np.array(embeddings[0])
 
     def remember(self, screenshot_path: str = None) -> int:
@@ -190,7 +192,7 @@ class LightweightCore:
             List[(metadata, similarity_score)]
         """
         print("\n" + "=" * 70)
-        print(f"🔍 ПОИСК: \"{query}\"")
+        print(f'🔍 ПОИСК: "{query}"')
         print("=" * 70)
 
         if self.storage.count() == 0:

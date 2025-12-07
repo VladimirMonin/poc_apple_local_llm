@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "timestamp": "2025-12-07T21:42:58.646737",
+    "screenshot_path": "/Users/v/Documents/py/poc_apple_local_llm/test_images/2025-11-27_16-13-40.png",
+    "text": "GLM-Subscripe\nНазвание\nGLM-Subscripe\nРежим АРІ\nСовместимо с API OpenAl\nАРІ-КЛЮЧ\nПроверить\nОшибка соединения!\n\"timestamp\": \"2025-11-27T11:13:32.467+00:00\",\n\"status\": 404,\n\"error\": \"Not Found\",\n\"path\": \"/v4\"\nХОСТ АРІ\napi.z.ai\nhttps://api.z.ai/api/coding/paas/v4\nПуть АРІ\napi/coding/paas/v4",
+    "text_length": 287
+  },
+  {
+    "id": 1,
+    "timestamp": "2025-12-07T21:42:58.734824",
+    "screenshot_path": "/Users/v/Documents/py/poc_apple_local_llm/test_images/russian_text.png",
+    "text": "Привет, мир! Hello, world!\nТест распознавания текста на русском языке.",
+    "text_length": 70
+  }
+]

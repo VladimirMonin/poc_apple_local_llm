@@ -163,7 +163,9 @@ class SystemProfiler:
 
         print("\n🔥 CPU:")
         print(f"  • Загрузка: {cpu.percent:.1f}%")
-        print(f"  • User: {cpu.user_percent:.1f}% | System: {cpu.system_percent:.1f}% | Idle: {cpu.idle_percent:.1f}%")
+        print(
+            f"  • User: {cpu.user_percent:.1f}% | System: {cpu.system_percent:.1f}% | Idle: {cpu.idle_percent:.1f}%"
+        )
 
         print("=" * 60)
 

@@ -15,6 +15,10 @@ from Foundation import NSURL
 import sys
 import os
 
+# Добавляем путь к модулям проекта
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from src.profiler import SystemProfiler
+
 
 def recognize_text_native(image_path, languages=['ru-RU', 'en-US']):
     """
